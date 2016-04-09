@@ -1,23 +1,17 @@
-## Laravel PHP Framework
+## Voiq test
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+For achieve the different task proposed in the test, the following libraries where used:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+### Google Geocoder API for Lavarel 5
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+This library provide a simple facility to make google geocoding API v3, in the case of this web app, it's used for geodecoding the zipcodes of the agents and contacs for matching, the dependencies, installing way and usange can be found in [Google Geocoder](https://github.com/alexpechkarev/google-geocoder).
 
-## Official Documentation
+### Ddeboer Data Import library
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+This library allow read data from many different file format, in the case of this application, it's used for read contacts data from csv file, this data is used after for seeder the database contacts table, all information about this library can be found in [Ddeboer Data Import library](https://github.com/ddeboer/data-import#installation).
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### Geotools for Lavarel 4 & 5
 
-### License
+This package provide tools for get geocode measures, in this application it is used for calculate the distances between agents and each contact for match assignation, the information about this package can be found in (Geotools for Lavarel 4 & 5)(https://github.com/toin0u/Geotools-laravel)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
