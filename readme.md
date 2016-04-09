@@ -13,5 +13,5 @@ This library allow read data from many different file format, in the case of thi
 
 ### Geotools for Lavarel 4 & 5
 
-This package provide tools for get geocode measures, in this application it is used for calculate the distances between agents and each contact for match assignation, the information about this package can be found in (Geotools for Lavarel 4 & 5)(https://github.com/toin0u/Geotools-laravel)
+This package provide tools for get geocode measures, in this application it is used for calculate the distances between agents and each contact for match assignation, the information about this package can be found in [Geotools for Lavarel 4 & 5](https://github.com/toin0u/Geotools-laravel)
 
