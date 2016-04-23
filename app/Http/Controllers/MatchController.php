@@ -10,7 +10,7 @@ class MatchController extends Controller {
 
 
 	/**
-	 * Action for trigger the match algoritm based on the zipcodes
+	 * Action for trigger the match algorithm based on the zipcodes
 	 * of the agents in view and the contacts saved previously in DB
 	 */
 	public function doMatch()
@@ -39,7 +39,7 @@ class MatchController extends Controller {
 	}
 
 	/**
-	 *  Geocode positionbased on provided zipcode
+	 *  Geocode position based on provided zipcode
 	 * @param $zipCode
 	 * @return array  position [latitude, longitude]
 	 */
@@ -54,6 +54,21 @@ class MatchController extends Controller {
 		return [$lat, $lng];
 	}
 
+	/**
+	 *  Geocode position based on provided zipcode - only for testing
+	 * @param $zipCode
+	 * @return array  position [latitude, longitude]
+	 */
+	private function geocodeZip2( $zipCode )
+	{
+		$param = array("address"=>$zipCode);
+		$geo = \Geocoder::geocode('json', $param);
+		$jsnGeo = json_decode($geo, true);
+
+		$lat = floatval( $jsnGeo['results'][0]['geometry']['location']['lat'] );
+		$lng = floatval( $jsnGeo['results'][0]['geometry']['location']['lng'] );
+		return [$lat, $lng];
+	}
 	/**
 	 *  Calculate the distances between each contact in db and each agent. setting agent id (1, 2)
 	 *  based on the proximity of each one
